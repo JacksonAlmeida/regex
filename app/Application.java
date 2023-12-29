@@ -6,10 +6,10 @@ import java.util.regex.Pattern;
 public class Application {
 
     public static void main (String[] args) {
-        String regex = "Olá mundo!";
-        String m = "do";
-        Pattern pattern = Pattern.compile(m, Pattern.CASE_INSENSITIVE);
-        Matcher matcher = pattern.matcher(regex);
+        String text = "Olá mundo!";
+        String regex = "do";
+        Pattern pattern = Pattern.compile(regex, Pattern.CASE_INSENSITIVE); // padrão;
+        Matcher matcher = pattern.matcher(text); // buscar o padrão;
 
         while (matcher.find()) {
             System.out.println(matcher.start());
